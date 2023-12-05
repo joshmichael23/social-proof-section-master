@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --VeryDarkMagenta: 300, 43%, 22%;
+    --SoftPink: hsl(333, 80%, 67%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    --color-VeryDarkMagenta: hsl(var(--VeryDarkMagenta));
+    --color-VeryDarkMagentaFaded: hsl(var(--VeryDarkMagenta), .2);
+}
+html{
+    display:flex;
+    font-size: 15px;
+    justify-content: center;
+}
+body{
+    font-family: "League Spartan";
+    background-color: var(--White);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    align-self: center;
+    
+}
+
+.container{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.container-top{
+    display: flex;
+}
+.container-bottom{
+    gap: 2em;
+    display: flex;
+}
+
+.container-top.upper{
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+}
+
+.container-top.under{
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.review{
+    font-weight: 700;
+    color: var(--color-VeryDarkMagenta);
+    width: 300px;
+    display:flex;
+    flex-direction: row;
+    background: var(--color-VeryDarkMagentaFaded);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.review>p{
+    margin:0;
+}
+
+.card{
+    height: 250px;
+    max-width: 300px;
+    display:flex;
+    padding: 2em;
+    gap: 1em;
+    border-radius: 10px;
+    color: var(--LightGrayishMagenta);
+    flex-direction: column;
+    align-content: space-evenly;
+    background-color: var(--color-VeryDarkMagenta);
+}
+
+.card.customer{
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    gap: 1em;
+    padding:0px;
+    flex-direction: row;
+    height: 25%;
+}
+
+.customer.info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+
+h1{
+    color: var(--color-VeryDarkMagenta);
+    font-size: 4em;
+    font-weight: 700;
+}
+
+h2{
+    color: var(--DarkGrayishMagenta);
+    font-weight: 400;
+}
+
+
+h3{
+    margin:0;
+}
+
+h4{
+    margin:0;
+    color: var(--SoftPink);
+    font-weight: 400;
+}
+
+.customer.pic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.profile-pic{
+    border-radius: 50%;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1/1;
+    
+}
+
+.card.customer > p{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+@media screen and (min-width: 300px) {
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+    main{
+        display:flex;
+    }
+
+    body{
+        background-image: url(images/bg-pattern-top-mobile.svg), url('images/bg-pattern-bottom-mobile.svg');
+        background-position: left 1vw top, right 1vw bottom 1vh;
+
+        width: 90vw;
+    }
+
+    .container{
+        width: 100%;
+    }
+    .container-top{
+        flex-direction: column;
+    }
+
+    .container-top.upper{
+        width: 100%;
+    }
+
+    .container-top.under{
+        align-items: center;
+        width: 100%;
+    }
+
+    .review{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-bottom{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    h1{
+        text-align: start;
+    }
+
+    h2{
+        text-align: start;
+    }
+
+    body{
+        background-image: url(images/bg-pattern-top-desktop.svg), url('images/bg-pattern-bottom-desktop.svg');
+        
+        background-position: left 1vw top 1vh, right 1vw bottom 1vh;
+        width: 100%;
+        height: 100vh;
+    }
+
+    main{
+        justify-content: center;
+        align-items: center;
+        display:flex;
+    }
+
+    .container{
+        width: 70%;
+    }
+
+    .container-top{
+        flex-direction: row;
+    }
+
+    .container-top.upper{
+        width: 50%;
+    }
+
+    .container-top.under{
+        align-self: center;
+        width: 50%;
+    }
+
+    .review{
+        flex-direction: row;
+    }
+    .review.one{
+        display: flex;
+        align-self: flex-start;
+    }
+    
+    .review.two{
+        display: flex;
+        align-self: center;
+    }
+    
+    .review.three{
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .container-bottom{
+        width: 100%;
+        height: 300px;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    .card.one{
+        
+        align-self: flex-start;
+
+    }
+
+    .card.two{
+        align-self: center;
+
+    }
+
+    .card.three{
+        align-self: flex-end;
+    }
+}
